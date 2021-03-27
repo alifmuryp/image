@@ -1,19 +1,9 @@
-image: monachus/hugo
- 
-variables:
-  GIT_SUBMODULE_STRATEGY: recursive
- 
-test:
-  script:
-  - hugo
-  except:
-  - master  
- 
 pages:
+  stage: deploy
   script:
-  - hugo --environment production
+  - echo 'Nothing to do...'
   artifacts:
     paths:
     - public
   only:
-  - master    
+  - master
